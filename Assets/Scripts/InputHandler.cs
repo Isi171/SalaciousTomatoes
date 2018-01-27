@@ -34,6 +34,26 @@ public class InputHandler : MonoBehaviour
 			downSwipeAction.Invoke();
 		}
 #elif UNITY_IOS || UNITY_ANDROID || UNITY_WP8 || UNITY_IPHONE
+		
+		//TODO workaround for testing
+		if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+		{
+			rightSwipeAction.Invoke();
+		}
+		else if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+		{
+			leftSwipeAction.Invoke();
+		}
+		else if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W))
+		{
+			upSwipeAction.Invoke();
+		}
+		else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+		{
+			downSwipeAction.Invoke();
+		}
+		//TODO end workaround
+		
 		if (Input.touchCount > 0)
 		{
 			Touch myTouch = Input.touches[0];

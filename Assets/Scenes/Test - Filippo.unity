@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b152b18c1f0134520a4f9d8d2f7e8f06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swipeUndoWindow: 0
+  swipeUndoWindow: 150
   rightSwipeAction:
     m_PersistentCalls:
       m_Calls:

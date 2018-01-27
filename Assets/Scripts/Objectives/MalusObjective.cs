@@ -2,10 +2,11 @@
 
 public class MalusObjective : Objective {
 
-    private int generations;
-    private int malus;
+    public int generations;
+    public int malus;
+    public int initialGeneration;
 
-    public MalusObjective(int minGen, int maxGen, int b, int m) {
+    public MalusObjective(int minGen, int maxGen, int b, int m, int g) {
         System.Random random = new System.Random();
 
         // Assign a slot to the objective.
@@ -16,6 +17,7 @@ public class MalusObjective : Objective {
         // Set the other fields.
         bonus = b * generations;
         malus = m;
+        initialGeneration = g;
     }
 
 }

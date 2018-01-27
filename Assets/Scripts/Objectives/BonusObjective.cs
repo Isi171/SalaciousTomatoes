@@ -2,7 +2,7 @@
 
 public class BonusObjective : Objective {
 
-    private Gene.Strength strength;
+    public Gene.Strength strength;
 
     public BonusObjective(int b) {
         // Assign a slot to the objective.
