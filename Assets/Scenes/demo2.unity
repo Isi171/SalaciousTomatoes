@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 294507095}
   - component: {fileID: 294507097}
   - component: {fileID: 294507096}
+  - component: {fileID: 294507098}
   m_Layer: 0
   m_Name: Limbs
   m_TagString: Untagged
@@ -200,6 +201,26 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_DirtyAABB: 1
+--- !u!114 &294507098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 294507094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d8bf6999df2c349ba069b4780c5eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSpeed: 0
+  neutralMaterials:
+  - {fileID: 2100000, guid: 701a9d1fb193eb2419ffaf954983f604, type: 2}
+  rockMaterials:
+  - {fileID: 2100000, guid: 8707d90972e1d844b83d2a788b4007ee, type: 2}
+  paperMaterials:
+  - {fileID: 2100000, guid: bd053d44a099557459d959edca95be79, type: 2}
+  scissorMaterials:
+  - {fileID: 2100000, guid: 469c3b83d4acd5745bd98ed0f557cd3d, type: 2}
 --- !u!1 &316347302
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +383,7 @@ GameObject:
   - component: {fileID: 524891520}
   - component: {fileID: 524891522}
   - component: {fileID: 524891521}
+  - component: {fileID: 524891523}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -440,6 +462,26 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_DirtyAABB: 1
+--- !u!114 &524891523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 524891519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d8bf6999df2c349ba069b4780c5eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSpeed: 0
+  neutralMaterials:
+  - {fileID: 2100000, guid: 7ce8bca0cb7086149a7a2f4ca9aecb6e, type: 2}
+  rockMaterials:
+  - {fileID: 2100000, guid: bffcd9f6cd9b99141ba0e7f5a48a9a5b, type: 2}
+  paperMaterials:
+  - {fileID: 2100000, guid: a6e71d2271b47194cb58f5889c736273, type: 2}
+  scissorMaterials:
+  - {fileID: 2100000, guid: 24fd0820f263f4c49a11e7223bb8cbac, type: 2}
 --- !u!1 &595916783
 GameObject:
   m_ObjectHideFlags: 0
@@ -728,7 +770,7 @@ MonoBehaviour:
   - {fileID: 1834960426}
   - {fileID: 1778842988}
   - {fileID: 979366071}
-  bonusScore: 0
+  bonusScore: 300
   malusProbability: 0.5
   malusScore: 100
   malusPenalty: -500
@@ -1107,6 +1149,7 @@ GameObject:
   - component: {fileID: 1621707683}
   - component: {fileID: 1621707685}
   - component: {fileID: 1621707684}
+  - component: {fileID: 1621707686}
   m_Layer: 0
   m_Name: Limbs
   m_TagString: Untagged
@@ -1185,6 +1228,26 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_DirtyAABB: 1
+--- !u!114 &1621707686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1621707682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d8bf6999df2c349ba069b4780c5eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSpeed: 0
+  neutralMaterials:
+  - {fileID: 2100000, guid: 701a9d1fb193eb2419ffaf954983f604, type: 2}
+  rockMaterials:
+  - {fileID: 2100000, guid: 8707d90972e1d844b83d2a788b4007ee, type: 2}
+  paperMaterials:
+  - {fileID: 2100000, guid: bd053d44a099557459d959edca95be79, type: 2}
+  scissorMaterials:
+  - {fileID: 2100000, guid: 469c3b83d4acd5745bd98ed0f557cd3d, type: 2}
 --- !u!224 &1632102641 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224244866069000958, guid: 635049acab1864a9d8d0ca4786ac4417,
@@ -1200,6 +1263,7 @@ GameObject:
   - component: {fileID: 1647806491}
   - component: {fileID: 1647806493}
   - component: {fileID: 1647806492}
+  - component: {fileID: 1647806494}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -1278,6 +1342,26 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_DirtyAABB: 1
+--- !u!114 &1647806494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1647806490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d8bf6999df2c349ba069b4780c5eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSpeed: 0
+  neutralMaterials:
+  - {fileID: 2100000, guid: 3ed808be399d8a04b88c916d90c4531e, type: 2}
+  rockMaterials:
+  - {fileID: 2100000, guid: c9fdf8bcac6692f41b6c744d4450bf10, type: 2}
+  paperMaterials:
+  - {fileID: 2100000, guid: 273690abbb65eb74caa3501f61e62afc, type: 2}
+  scissorMaterials:
+  - {fileID: 2100000, guid: 4076333dbbb3f9c4e92579afaadd2893, type: 2}
 --- !u!1 &1691560449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,6 +1372,7 @@ GameObject:
   - component: {fileID: 1691560450}
   - component: {fileID: 1691560452}
   - component: {fileID: 1691560451}
+  - component: {fileID: 1691560453}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -1366,6 +1451,26 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_DirtyAABB: 1
+--- !u!114 &1691560453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1691560449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d8bf6999df2c349ba069b4780c5eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSpeed: 0
+  neutralMaterials:
+  - {fileID: 2100000, guid: 7ce8bca0cb7086149a7a2f4ca9aecb6e, type: 2}
+  rockMaterials:
+  - {fileID: 2100000, guid: bffcd9f6cd9b99141ba0e7f5a48a9a5b, type: 2}
+  paperMaterials:
+  - {fileID: 2100000, guid: a6e71d2271b47194cb58f5889c736273, type: 2}
+  scissorMaterials:
+  - {fileID: 2100000, guid: 24fd0820f263f4c49a11e7223bb8cbac, type: 2}
 --- !u!1 &1727237099
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1635,7 @@ GameObject:
   - component: {fileID: 1798986196}
   - component: {fileID: 1798986198}
   - component: {fileID: 1798986197}
+  - component: {fileID: 1798986199}
   m_Layer: 0
   m_Name: Head
   m_TagString: Untagged
@@ -1608,6 +1714,26 @@ SkinnedMeshRenderer:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_DirtyAABB: 1
+--- !u!114 &1798986199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1798986195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6d8bf6999df2c349ba069b4780c5eec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationSpeed: 0
+  neutralMaterials:
+  - {fileID: 2100000, guid: 3ed808be399d8a04b88c916d90c4531e, type: 2}
+  rockMaterials:
+  - {fileID: 2100000, guid: c9fdf8bcac6692f41b6c744d4450bf10, type: 2}
+  paperMaterials:
+  - {fileID: 2100000, guid: 273690abbb65eb74caa3501f61e62afc, type: 2}
+  scissorMaterials:
+  - {fileID: 2100000, guid: 4076333dbbb3f9c4e92579afaadd2893, type: 2}
 --- !u!1001 &1834960425
 Prefab:
   m_ObjectHideFlags: 0

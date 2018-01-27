@@ -3,11 +3,11 @@
 [RequireComponent(typeof(SkinnedMeshRenderer))]
 public class MaterialAnimator : MonoBehaviour {
 
-    [SerializeField] private float animationSpeed;
+	[SerializeField] private float animationSpeed;
+	[SerializeField] private Material[] neutralMaterials;
+	[SerializeField] private Material[] rockMaterials;
     [SerializeField] private Material[] paperMaterials;
-    [SerializeField] private Material[] rockMaterials;
     [SerializeField] private Material[] scissorMaterials;
-    [SerializeField] private Material[] neutralMaterials;
 
     private Gene.RPS currentAnimation;
 
@@ -47,8 +47,8 @@ public class MaterialAnimator : MonoBehaviour {
         }
     }
 
-    public void SetMaterial(Gene.RPS gene) {
-        currentAnimation = gene;
+    public void SetMaterial(Gene gene) {
+        currentAnimation = gene.RpsValue;
     }
 
 }
