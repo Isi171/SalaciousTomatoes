@@ -5,12 +5,12 @@ using UnityEngine;
 public class Randomize : MonoBehaviour
 {
 	public ObjectiveManager objectiveManager;
-	MaterialSwapper arms;
+	MaterialSwapper limbs;
 	MaterialSwapper body;
 	MaterialSwapper head;
 
 	void Start (){
-		arms = GameObject.FindGameObjectWithTag ("NewMonster").transform.Find ("Arms").gameObject.GetComponent<MaterialSwapper>();
+		limbs = GameObject.FindGameObjectWithTag ("NewMonster").transform.Find ("Limbs").gameObject.GetComponent<MaterialSwapper>();
 		body = GameObject.FindGameObjectWithTag ("NewMonster").transform.Find ("Body").gameObject.GetComponent<MaterialSwapper>();
 		head = GameObject.FindGameObjectWithTag ("NewMonster").transform.Find ("Head").gameObject.GetComponent<MaterialSwapper>();
 	}
@@ -18,7 +18,7 @@ public class Randomize : MonoBehaviour
 	// I'm sorry Mario, but your Random logic is in another class
 
 	public void PressButton (){
-		arms.Randomize ();
+		limbs.Randomize ();
 		body.Randomize ();
 		head.Randomize ();
 	}
