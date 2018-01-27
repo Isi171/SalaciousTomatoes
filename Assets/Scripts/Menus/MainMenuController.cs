@@ -19,7 +19,7 @@ public class MainMenuController : MonoBehaviour
     private void Start()
     {
         highscoreTitle.text = highscoreTitles[random.Next(highscoreTitles.Length)];
-        highscore.text = PlayerPrefs.GetInt("highscore").ToString();
+        highscore.text = PlayerPrefs.GetInt("Highscore").ToString();
     }
     
     public void Play()
