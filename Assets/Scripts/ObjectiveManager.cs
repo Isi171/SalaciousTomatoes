@@ -1,8 +1,6 @@
-﻿using System.CodeDom;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ObjectiveManager : MonoBehaviour {
@@ -48,8 +46,12 @@ public class ObjectiveManager : MonoBehaviour {
         if (seconds == 60) {
             minutes++;
             seconds = 0;
-        }            
+        }
+
         timeText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+
+        if (gameDuration - Time.time - initialTime < 0)
+            EndGame();
     }
 
     public void CheckNewCreature(Gene head, Gene body, Gene limbs) {
@@ -158,15 +160,18 @@ public class ObjectiveManager : MonoBehaviour {
         }
     }
 
-    private void DecreaseTimers()
-    {
+    private void DecreaseTimers() {
         foreach (ObjectiveHandler o in handlers) {
-            if (o.objective is MalusObjective)
-            {
-                ((MalusObjective) o.objective).counter--;
-                o.timerText.text = ((MalusObjective) o.objective).counter.ToString();
+            if (o.objective is MalusObjective) {
+                ((MalusObjective)o.objective).counter--;
+                o.timerText.text = ((MalusObjective)o.objective).counter.ToString();
             }
         }
+    }
+
+    private void EndGame() {
+        PlayerPrefs.SetInt("Score", score);
+        SceneManager.LoadScene("Score");
     }
 
 }

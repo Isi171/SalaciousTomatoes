@@ -127,11 +127,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d8bf6999df2c349ba069b4780c5eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materials:
-  - {fileID: 2100000, guid: db4dc113920dd2641b2451f63ae7586c, type: 2}
-  - {fileID: 2100000, guid: acca56ba9e8f6f94aacbba041cc5fc0c, type: 2}
-  - {fileID: 2100000, guid: 252d65bafc9146d41af43d512680fb72, type: 2}
   animationSpeed: 0.2
+  paperMaterials:
+  - {fileID: 2100000, guid: db4dc113920dd2641b2451f63ae7586c, type: 2}
+  rockMaterials:
+  - {fileID: 0}
+  scissorMaterials:
+  - {fileID: 0}
+  neutralMaterials: []
 --- !u!1 &471348505
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,11 +739,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6d8bf6999df2c349ba069b4780c5eec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  materials:
-  - {fileID: 2100000, guid: dc254f446ebe54d4185532768ad004a0, type: 2}
-  - {fileID: 2100000, guid: 7fcbe281606ee4142ae2f169c153b38e, type: 2}
-  - {fileID: 2100000, guid: 24cdbe91eb23e884f948c1a546ace964, type: 2}
   animationSpeed: 0.1
+  paperMaterials: []
+  rockMaterials: []
+  scissorMaterials: []
+  neutralMaterials: []
 --- !u!137 &1455854323 stripped
 SkinnedMeshRenderer:
   m_PrefabParentObject: {fileID: 13700000, guid: 8996553a2839f5144882615ea3148065,
