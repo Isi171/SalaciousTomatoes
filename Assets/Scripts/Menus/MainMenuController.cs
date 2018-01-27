@@ -12,12 +12,16 @@ public class MainMenuController : MonoBehaviour
         "DNA sequences sampled",
         "Gene samples analyzed",
         "Test subjects treated",
-        "Organic matter processed (kg)"
+        "Organic matter processed (kg)",
+        "RNA splices performed",
+        "Biological matter liquified (kg)",
+        "Ectobiological recombinations performed",
+        "Traits inherited"
     };
     
     private void Start()
     {
-        highscoreTitle.text = highscoreTitles[CustomRandom.Next(highscoreTitles.Length)];
+        highscoreTitle.text = CustomRandom.From(highscoreTitles);
         highscore.text = PlayerPrefs.GetInt("Highscore").ToString();
     }
     

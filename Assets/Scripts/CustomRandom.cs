@@ -11,4 +11,9 @@
     {
         return random.Next(minValue, maxValue);
     }
+
+    public static T From<T>(T[] array)
+    {
+        return array[random.Next(array.Length)];
+    }
 }

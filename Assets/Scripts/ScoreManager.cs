@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
 
-    private static readonly System.Random random = new System.Random();
     [SerializeField] private RectTransform highScore;
     [SerializeField] private Text score;
     [SerializeField] private Text thankYou;
@@ -30,7 +29,7 @@ public class ScoreManager : MonoBehaviour {
     
     void Start ()
     {
-        thankYou.text = thankYous[random.Next(thankYous.Length)];
+        thankYou.text = CustomRandom.From(thankYous);
         int lastScore = PlayerPrefs.GetInt("Score");
 
         score.text = lastScore.ToString();
