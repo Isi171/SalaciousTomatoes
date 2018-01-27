@@ -57,15 +57,15 @@ public class ObjectiveManager : MonoBehaviour {
         foreach (BonusObjective b in bonusObjectives) {
             switch (b.slot) {
                 case Objective.Slot.Head:
-                    if (head.RpsValue == b.gene && head.StrValue == b.strength)
+                    if (head.RpsValue == b.gene/* && head.StrValue == b.strength*/)
                         CompleteBonus(b);
                     break;
                 case Objective.Slot.Body:
-                    if (body.RpsValue == b.gene && body.StrValue == b.strength)
+                    if (body.RpsValue == b.gene/* && body.StrValue == b.strength*/)
                         CompleteBonus(b);
                     break;
                 case Objective.Slot.Limbs:
-                    if (limbs.RpsValue == b.gene && limbs.StrValue == b.strength)
+                    if (limbs.RpsValue == b.gene/* && limbs.StrValue == b.strength*/)
                         CompleteBonus(b);
                     break;
             }
@@ -131,7 +131,7 @@ public class ObjectiveManager : MonoBehaviour {
             } else {
                 BonusObjective b = new BonusObjective(bonusScore, random);
                 ObjectiveHandler o = FindVoidSlot(b);
-                o.SetObjective("Get " + b.strength.ToString() + " " + b.gene.ToString() + " in your " + b.slot.ToString() + ".");
+                o.SetObjective("Get " /*+ b.strength.ToString() + " "*/ + b.gene.ToString() + " in your " + b.slot.ToString() + ".");
                 o.SetTimer("");
                 bonusObjectives.Add(b);
             }

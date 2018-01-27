@@ -10,8 +10,10 @@ public class MaterialSwapper : MonoBehaviour {
 	public BodyPartType bpt;
 	RPStoMaterial associator;
 	Gene currentGene;
+	
 	// Use this for initialization
-	void Start () {
+	void Start ()
+	{
 		smr = GetComponent<SkinnedMeshRenderer> ();
 		if (bpt == BodyPartType.Arms) {
 			associator = GameObject.FindGameObjectWithTag ("ArmsAssociator").GetComponent<RPStoMaterial>();
@@ -28,7 +30,7 @@ public class MaterialSwapper : MonoBehaviour {
 		if (Gene.Equals (currentGene, newGene) == 1) { //the new gene is stronger
 			currentGene = newGene;
 		}
-		smr.material=associator.Associate (currentGene);
+		smr.material = associator.Associate(currentGene);
 	}
 
 	public void Randomize(){

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Combine : MonoBehaviour {
+	public ObjectiveManager objectiveManager;
+	public Randomize randomizer;
 	MaterialSwapper currentArms;
 	MaterialSwapper currentBody;
 	MaterialSwapper currentHead;
@@ -23,5 +25,7 @@ public class Combine : MonoBehaviour {
 		currentArms.GeneLogic (newArms.CurrentGene);
 		currentBody.GeneLogic (newBody.CurrentGene);
 		currentHead.GeneLogic (newHead.CurrentGene);
+		objectiveManager.CheckNewCreature(currentHead.CurrentGene, currentBody.CurrentGene, currentArms.CurrentGene);
+		randomizer.PressButton();
 	}
 }

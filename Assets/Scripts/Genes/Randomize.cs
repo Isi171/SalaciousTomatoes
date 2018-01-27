@@ -21,6 +21,5 @@ public class Randomize : MonoBehaviour
 		arms.Randomize ();
 		body.Randomize ();
 		head.Randomize ();
-		objectiveManager.CheckNewCreature(head.CurrentGene, body.CurrentGene, arms.CurrentGene);
 	}
 }
