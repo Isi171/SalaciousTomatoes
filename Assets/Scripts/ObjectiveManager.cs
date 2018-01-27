@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ObjectiveManager : MonoBehaviour {
 
+    private Combine combine;
+
     [SerializeField] private int gameDuration;
 
     [Header("Objectives")] [SerializeField] private int activeObjectives;
@@ -32,6 +34,10 @@ public class ObjectiveManager : MonoBehaviour {
 
     System.Random random = new System.Random();
 
+    public void SetCombine(Combine combine){
+        this.combine = combine;
+    }
+
     void Start() {
         GenerateObjectives();
 
@@ -58,7 +64,7 @@ public class ObjectiveManager : MonoBehaviour {
 
     public void CheckNewCreature(Gene head, Gene body, Gene limbs) {
         generation++;
-
+        //Debug.Log(head.RpsValue.ToString() + "  " + body.RpsValue.ToString() + " " + limbs.RpsValue.ToString());
         foreach (BonusObjective b in bonusObjectives) {
             switch (b.slot) {
                 case Objective.Slot.Head:
@@ -105,7 +111,7 @@ public class ObjectiveManager : MonoBehaviour {
         completedMalus.Clear();
 
         DecreaseTimers();
-        GenerateObjectives();
+        GenerateObjectives(head, body, limbs);
     }
 
     private void CompleteBonus(BonusObjective o) {
@@ -125,22 +131,59 @@ public class ObjectiveManager : MonoBehaviour {
         scoreText.text = score.ToString();
     }
 
-    private void GenerateObjectives() {
+    //First call only
+    private void GenerateObjectives(){
+        GenerateObjectives(null, null, null);
+    }
+
+    private void GenerateObjectives(Gene head, Gene body, Gene limbs) {
+        //Any null arguments indicated that it is the first call.
+        //No malus for first generation
+
         while (bonusObjectives.Count + malusObjectives.Count < activeObjectives) {
-            if (malusObjectives.Count == 0 && random.Next(0, 100) < malusProbability * 100) {
-                MalusObjective m = new MalusObjective(malusMinGenerations, malusMaxGenerations, malusScore, malusPenalty, generation, random);
+            if (head!=null && malusObjectives.Count == 0 && random.Next(0, 100) < malusProbability * 100) {
+                //This is to avoid new objectives that would be automatically triggered
+                //If there is a God, I hope it will forgive me for this mess
+                MalusObjective m;
+                do
+                {
+                    m = new MalusObjective(malusMinGenerations, malusMaxGenerations, malusScore, malusPenalty, generation, random);
+                } while (isObjectiveInConflict(m,head,body,limbs));
+
                 ObjectiveHandler o = FindVoidSlot(m);
                 o.SetObjective("Avoid " + m.gene.ToString() + " in your " + m.slot.ToString() + " for " + m.generations + " generations.");
                 o.SetTimer((m.initialGeneration + m.generations - generation).ToString());
                 malusObjectives.Add(m);
-            } else {
-                BonusObjective b = new BonusObjective(bonusScore, random, bonusObjectives);
+
+            }
+            else {
+                BonusObjective b;
+                do
+                {
+                    b = new BonusObjective(bonusScore, random, bonusObjectives);
+                } while (isObjectiveInConflict(b, head, body, limbs));
+
                 ObjectiveHandler o = FindVoidSlot(b);
                 o.SetObjective("Get " /*+ b.strength.ToString() + " "*/ + b.gene.ToString() + " in your " + b.slot.ToString() + ".");
                 o.SetTimer("");
                 bonusObjectives.Add(b);
             }
         }
+    }
+
+    private bool isObjectiveInConflict(Objective o, Gene head, Gene body, Gene limbs)
+    {
+        if (head == null)
+            return false;
+
+        if (o.slot.Equals(Objective.Slot.Head) && o.gene.Equals(head))
+            return true;
+        else if (o.slot.Equals(Objective.Slot.Body) && o.gene.Equals(body))
+            return true;
+        else if (o.slot.Equals(Objective.Slot.Limbs) && o.gene.Equals(limbs))
+            return true;
+        else
+            return false;            
     }
 
     private ObjectiveHandler FindVoidSlot(Objective objective) {

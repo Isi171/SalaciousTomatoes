@@ -12,14 +12,25 @@ public class Combine : MonoBehaviour {
 	MaterialSwapper newBody;
 	MaterialSwapper newHead;
 
-	void Start (){
+    public Gene GetGene(Objective.Slot s){
+
+        if (s.Equals(Objective.Slot.Head))
+            return currentHead.CurrentGene;
+        else if(s.Equals(Objective.Slot.Limbs))
+            return currentLimbs.CurrentGene;
+        else
+            return currentBody.CurrentGene;
+    }
+
+    void Start (){
 		currentLimbs = GameObject.FindGameObjectWithTag ("CurrentMonster").transform.Find ("Limbs").gameObject.GetComponent<MaterialSwapper>();
 		currentBody = GameObject.FindGameObjectWithTag ("CurrentMonster").transform.Find ("Body").gameObject.GetComponent<MaterialSwapper>();
 		currentHead = GameObject.FindGameObjectWithTag ("CurrentMonster").transform.Find ("Head").gameObject.GetComponent<MaterialSwapper>();
 		newLimbs = GameObject.FindGameObjectWithTag ("NewMonster").transform.Find ("Limbs").gameObject.GetComponent<MaterialSwapper>();
 		newBody = GameObject.FindGameObjectWithTag ("NewMonster").transform.Find ("Body").gameObject.GetComponent<MaterialSwapper>();
 		newHead = GameObject.FindGameObjectWithTag ("NewMonster").transform.Find ("Head").gameObject.GetComponent<MaterialSwapper>();
-	}
+        objectiveManager.SetCombine(this);
+    }
 
 	public void PressButton (){
 		currentLimbs.GeneLogic (newLimbs.CurrentGene);
