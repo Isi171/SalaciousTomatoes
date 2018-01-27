@@ -1,8 +1,6 @@
-﻿using UnityEngine;
+﻿public class Objective {
 
-public class Objective {
-
-    public enum Slot { Head, Chest, Arms, Legs };
+    public enum Slot { Head, Body, Limb };
 
     protected Gene.RPS gene;
     protected Slot slot;
