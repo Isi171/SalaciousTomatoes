@@ -1376,8 +1376,8 @@ GameObject:
   - component: {fileID: 1727237101}
   - component: {fileID: 1727237100}
   m_Layer: 0
-  m_Name: RPStoMaterial_Arms
-  m_TagString: ArmsAssociator
+  m_Name: RPStoMaterial_Limbs
+  m_TagString: LimbsAssociator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
