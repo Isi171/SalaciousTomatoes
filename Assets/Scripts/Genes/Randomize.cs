@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Randomize : MonoBehaviour {
-	
+public class Randomize : MonoBehaviour
+{
+	public ObjectiveManager objectiveManager;
 	MaterialSwapper arms;
 	MaterialSwapper body;
 	MaterialSwapper head;
@@ -20,5 +21,6 @@ public class Randomize : MonoBehaviour {
 		arms.Randomize ();
 		body.Randomize ();
 		head.Randomize ();
+		objectiveManager.CheckNewCreature(head.CurrentGene, body.CurrentGene, arms.CurrentGene);
 	}
 }
