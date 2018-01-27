@@ -19,16 +19,13 @@ public class MaterialSwapper : MonoBehaviour {
 			associator = GameObject.FindGameObjectWithTag ("HeadAssociator").GetComponent<RPStoMaterial>();
 		}
 		currentGene = new Gene (Gene.RPS.Zero, Gene.Strength.Small);
-		SwapMaterial ();
+		smr.material=associator.Associate (currentGene); //associator... ASSOCIATE!
 	}
-	
+
 	public void GeneLogic (Gene newGene){
 		if (Gene.Equals (currentGene, newGene) == 1) { //the new gene is stronger
 			currentGene = newGene;
 		}
-		SwapMaterial ();
-	}
-
-	void SwapMaterial (){
+		smr.material=associator.Associate (currentGene);
 	}
 }
