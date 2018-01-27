@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 294507097}
   - component: {fileID: 294507096}
   m_Layer: 0
-  m_Name: Arms
+  m_Name: Limbs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1108,7 +1108,7 @@ GameObject:
   - component: {fileID: 1621707685}
   - component: {fileID: 1621707684}
   m_Layer: 0
-  m_Name: Arms
+  m_Name: Limbs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

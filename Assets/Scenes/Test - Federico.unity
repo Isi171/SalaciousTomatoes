@@ -122,7 +122,7 @@ GameObject:
   - component: {fileID: 7911462}
   - component: {fileID: 7911461}
   m_Layer: 0
-  m_Name: RPStoMaterial_Arms
+  m_Name: RPStoMaterial_Limbs
   m_TagString: ArmsAssociator
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -577,6 +577,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce60f2cebdb166e42a8046556e0181ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectiveManager: {fileID: 0}
+  randomizer: {fileID: 0}
 --- !u!1 &766888358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1024,6 +1026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4297c373a8b7f7f4bb2d09e3717552c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectiveManager: {fileID: 0}
 --- !u!1 &1305569020
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,7 +1038,7 @@ GameObject:
   - component: {fileID: 1305569023}
   - component: {fileID: 1305569022}
   m_Layer: 0
-  m_Name: Arms
+  m_Name: Limbs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1271,7 +1274,7 @@ GameObject:
   - component: {fileID: 1959282931}
   - component: {fileID: 1959282930}
   m_Layer: 0
-  m_Name: Arms
+  m_Name: Limbs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

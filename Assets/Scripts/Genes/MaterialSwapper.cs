@@ -6,7 +6,7 @@ using UnityEngine;
 public class MaterialSwapper : MonoBehaviour {
 	private static System.Random random = new System.Random ();
 	SkinnedMeshRenderer smr;
-	public enum BodyPartType {Arms, Body, Head};
+	public enum BodyPartType {Limbs, Body, Head};
 	public BodyPartType bpt;
 	RPStoMaterial associator;
 	Gene currentGene;
@@ -15,8 +15,8 @@ public class MaterialSwapper : MonoBehaviour {
 	void Start ()
 	{
 		smr = GetComponent<SkinnedMeshRenderer> ();
-		if (bpt == BodyPartType.Arms) {
-			associator = GameObject.FindGameObjectWithTag ("ArmsAssociator").GetComponent<RPStoMaterial>();
+		if (bpt == BodyPartType.Limbs) {
+			associator = GameObject.FindGameObjectWithTag ("LimbsAssociator").GetComponent<RPStoMaterial>();
 		} else if (bpt == BodyPartType.Body) {
 			associator = GameObject.FindGameObjectWithTag ("BodyAssociator").GetComponent<RPStoMaterial>();
 		} else if (bpt == BodyPartType.Head) {
