@@ -112,7 +112,7 @@ public class ObjectiveManager : MonoBehaviour {
 
     private void CompleteMalus(MalusObjective o, bool success) {
         completedMalus.Add(o);
-        UpdateScore(success ? o.malus : o.bonus);
+        UpdateScore(success ? o.bonus : o.malus);
         RemoveFromSlot(o);
     }
 
