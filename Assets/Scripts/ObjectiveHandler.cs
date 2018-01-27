@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ObjectiveHandler : MonoBehaviour {
+    public Text timerText;
     [SerializeField] private Text geneRequestText;
-    [SerializeField] private Text timerText;
     [SerializeField] private Image icon;
 
     public Objective objective {
@@ -16,8 +16,9 @@ public class ObjectiveHandler : MonoBehaviour {
         geneRequestText.text = s;
     }
 
-    public void SetTimer(string s) {
-        timerText.text = s;
+    public void SetTimer(string counter)
+    {
+        timerText.text = counter;
     }
-
+    
 }
