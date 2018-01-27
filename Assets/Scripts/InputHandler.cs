@@ -1,11 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class InputHandler : MonoBehaviour
 {
+	public bool stopInput;
 	private Vector2 touchOrigin = -Vector2.one;
 	[SerializeField] private float swipeUndoWindow;
 	[SerializeField] private UnityEvent rightSwipeAction;
@@ -16,6 +14,10 @@ public class InputHandler : MonoBehaviour
 	
 	private void Update ()
 	{
+		if (stopInput)
+		{
+			return;
+		}
 #if UNITY_STANDALONE || UNITY_WEBPLAYER            
 		if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
 		{

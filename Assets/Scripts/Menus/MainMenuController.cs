@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
-    private static readonly System.Random random = new System.Random();
     [SerializeField] private Text highscoreTitle;
     [SerializeField] private Text highscore;
     private readonly string[] highscoreTitles =
@@ -13,13 +12,17 @@ public class MainMenuController : MonoBehaviour
         "DNA sequences sampled",
         "Gene samples analyzed",
         "Test subjects treated",
-        "Organic matter processed (kg)"
+        "Organic matter processed (kg)",
+        "RNA splices performed",
+        "Biological matter liquified (kg)",
+        "Ectobiological recombinations performed",
+        "Traits inherited"
     };
     
     private void Start()
     {
-        highscoreTitle.text = highscoreTitles[random.Next(highscoreTitles.Length)];
-        highscore.text = PlayerPrefs.GetInt("highscore").ToString();
+        highscoreTitle.text = CustomRandom.From(highscoreTitles);
+        highscore.text = PlayerPrefs.GetInt("Highscore").ToString();
     }
     
     public void Play()

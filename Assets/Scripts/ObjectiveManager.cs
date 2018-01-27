@@ -41,12 +41,12 @@ public class ObjectiveManager : MonoBehaviour {
     void Start() {
         GenerateObjectives();
 
-        initialTime = Time.time;
+        initialTime = TimeSinceStart();
         scoreText.text = score.ToString();
     }
 
     private void Update() {
-        float residualTime = gameDuration - Time.time - initialTime;
+        float residualTime = gameDuration - TimeSinceStart() - initialTime;
         int minutes = (int)Mathf.Floor(residualTime / 60);
         int seconds = Mathf.RoundToInt(residualTime % 60);
         if (seconds == 60) {
@@ -55,8 +55,11 @@ public class ObjectiveManager : MonoBehaviour {
         }            
         timeText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
 
-        if (gameDuration - Time.time - initialTime < 0)
+        if (gameDuration - TimeSinceStart() - initialTime < 0)
+        {
+            timeText.text = "00:00";
             EndGame();
+        }
     }
 
     public void CheckNewCreature(Gene head, Gene body, Gene limbs) {
@@ -214,6 +217,11 @@ public class ObjectiveManager : MonoBehaviour {
     private void EndGame() {
         PlayerPrefs.SetInt("Score", score);
         SceneManager.LoadScene("Score");
+    }
+
+    private static float TimeSinceStart()
+    {
+        return Time.timeSinceLevelLoad;
     }
 
 }
