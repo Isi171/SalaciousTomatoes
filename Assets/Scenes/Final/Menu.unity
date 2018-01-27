@@ -559,7 +559,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: DNA sequences sampled
+  m_Text: Highscore
 --- !u!222 &612874035
 CanvasRenderer:
   m_ObjectHideFlags: 0
