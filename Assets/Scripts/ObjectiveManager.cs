@@ -46,8 +46,7 @@ public class ObjectiveManager : MonoBehaviour {
         if (seconds == 60) {
             minutes++;
             seconds = 0;
-        }
-
+        }            
         timeText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
 
         if (gameDuration - Time.time - initialTime < 0)
