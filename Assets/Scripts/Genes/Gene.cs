@@ -2,11 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gene : MonoBehaviour {
+public class Gene {
 	public enum RPS {Rock, Paper, Scissors, Zero};
 	public enum Strength {Small, Medium, Big};
 	RPS rpsValue;
 	Strength strValue;
+
+	public Gene (RPS rps, Strength str){
+		rpsValue = rps;
+		strValue = str;
+	}
 
 	/**
 	 * returns -1 if the current gene is stronger than the new one;
