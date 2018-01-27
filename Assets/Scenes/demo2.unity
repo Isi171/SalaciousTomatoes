@@ -762,6 +762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0807ec03fcce4af47b7c14d6574712e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InputHandlerObj: {fileID: 720459629}
   gameDuration: 120
   activeObjectives: 3
   handlers:
