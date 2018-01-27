@@ -132,7 +132,7 @@ public class ObjectiveManager : MonoBehaviour {
                 o.SetTimer((m.initialGeneration + m.generations - generation).ToString());
                 malusObjectives.Add(m);
             } else {
-                BonusObjective b = new BonusObjective(bonusScore, random);
+                BonusObjective b = new BonusObjective(bonusScore, random, bonusObjectives);
                 ObjectiveHandler o = FindVoidSlot(b);
                 o.SetObjective("Get " /*+ b.strength.ToString() + " "*/ + b.gene.ToString() + " in your " + b.slot.ToString() + ".");
                 o.SetTimer("");
