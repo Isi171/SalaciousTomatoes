@@ -39,4 +39,8 @@ public class MaterialSwapper : MonoBehaviour {
 		currentGene = new Gene (rps, strength);
 		smr.material = associator.Associate (currentGene);
 	}
+
+	public Gene CurrentGene {
+		get{ return currentGene; }
+	}
 }
