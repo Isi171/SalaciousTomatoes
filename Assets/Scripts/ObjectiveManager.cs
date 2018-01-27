@@ -6,6 +6,7 @@ using UnityEngine;
 public class ObjectiveManager : MonoBehaviour {
 
     [Header("Objectives")] [SerializeField] private int activeObjectives;
+    [SerializeField] ObjectiveHandler[] handlers;
 
     [Header("Bonus")] [SerializeField] private int bonusScore;
 
@@ -84,11 +85,13 @@ public class ObjectiveManager : MonoBehaviour {
     private void CompleteBonus(BonusObjective o) {
         completedBonus.Add(o);
         UpdateScore(o.bonus);
+        RemoveFromSlot(o);
     }
 
     private void CompleteMalus(MalusObjective o, bool success) {
         completedMalus.Add(o);
         UpdateScore(success ? o.malus : o.bonus);
+        RemoveFromSlot(o);
     }
 
     private void UpdateScore(int i) {
@@ -97,10 +100,36 @@ public class ObjectiveManager : MonoBehaviour {
 
     private void GenerateObjectives() {
         while (bonusObjectives.Count + malusObjectives.Count < activeObjectives) {
-            if (malusObjectives.Count == 0 && random.Next(0, 100) < malusProbability * 100)
-                malusObjectives.Add(new MalusObjective(malusMinGenerations, malusMaxGenerations, malusScore, malusPenalty, generation));
-            else
-                bonusObjectives.Add(new BonusObjective(bonusScore));
+            if (malusObjectives.Count == 0 && random.Next(0, 100) < malusProbability * 100) {
+                MalusObjective m = new MalusObjective(malusMinGenerations, malusMaxGenerations, malusScore, malusPenalty, generation, random);
+                ObjectiveHandler o = FindVoidSlot(m);
+                o.SetObjective("Avoid " + m.gene.ToString() + " in your " + m.slot.ToString() + " for " + m.generations + " generations.");
+                malusObjectives.Add(m);
+            } else {
+                BonusObjective b = new BonusObjective(bonusScore, random);
+                ObjectiveHandler o = FindVoidSlot(b);
+                o.SetObjective("Get " + b.strength.ToString() + " " + b.gene.ToString() + " in your " + b.slot.ToString() + ".");
+                bonusObjectives.Add(b);
+            }
+        }
+    }
+
+    private ObjectiveHandler FindVoidSlot(Objective objective) {
+        foreach (ObjectiveHandler o in handlers) {
+            if (o.objective == null) {
+                o.objective = objective;
+                return o;
+            }
+        }
+        return null;
+    }
+
+    private void RemoveFromSlot(Objective objective) {
+        foreach (ObjectiveHandler o in handlers) {
+            if (o.objective == objective) {
+                o.objective = null;
+                break;
+            }
         }
     }
 
