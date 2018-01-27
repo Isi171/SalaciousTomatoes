@@ -1,9 +1,9 @@
 ﻿public class Objective {
 
-    public enum Slot { Head, Body, Limb };
+    public enum Slot { Head, Body, Limbs };
 
-    protected Gene.RPS gene;
-    protected Slot slot;
-    protected int bonus;
+    public Gene.RPS gene;
+    public Slot slot;
+    public int bonus;
 
 }
