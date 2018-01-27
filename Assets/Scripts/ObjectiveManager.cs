@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectiveManager : MonoBehaviour {
+
+    [SerializeField] private int gameDuration;
 
     [Header("Objectives")] [SerializeField] private int activeObjectives;
     [SerializeField] ObjectiveHandler[] handlers;
@@ -16,6 +19,9 @@ public class ObjectiveManager : MonoBehaviour {
     [SerializeField] private int malusMinGenerations;
     [SerializeField] private int malusMaxGenerations;
 
+    [Header("UI")] [SerializeField] private Text scoreText;
+    [SerializeField] private Text timeText;
+
     private List<BonusObjective> bonusObjectives = new List<BonusObjective>();
     private List<MalusObjective> malusObjectives = new List<MalusObjective>();
     private List<BonusObjective> completedBonus = new List<BonusObjective>();
@@ -23,11 +29,26 @@ public class ObjectiveManager : MonoBehaviour {
 
     private int score = 0;
     private int generation = 0;
+    private float initialTime;
 
     System.Random random = new System.Random();
 
     void Start() {
         GenerateObjectives();
+
+        initialTime = Time.time;
+        scoreText.text = score.ToString();
+    }
+
+    private void Update() {
+        float residualTime = gameDuration - Time.time - initialTime;
+        float minutes = Mathf.Floor(residualTime / 60);
+        float seconds = Mathf.RoundToInt(residualTime % 60);
+        if (seconds == 60) {
+            minutes++;
+            seconds = 0;
+        }            
+        timeText.text = minutes.ToString("00") + ":" + seconds.ToString("00");
     }
 
     public void CheckNewCreature(Gene head, Gene body, Gene limbs) {
@@ -96,6 +117,7 @@ public class ObjectiveManager : MonoBehaviour {
 
     private void UpdateScore(int i) {
         score = score + i < 0 ? 0 : score + i;
+        scoreText.text = score.ToString();
     }
 
     private void GenerateObjectives() {
@@ -104,11 +126,13 @@ public class ObjectiveManager : MonoBehaviour {
                 MalusObjective m = new MalusObjective(malusMinGenerations, malusMaxGenerations, malusScore, malusPenalty, generation, random);
                 ObjectiveHandler o = FindVoidSlot(m);
                 o.SetObjective("Avoid " + m.gene.ToString() + " in your " + m.slot.ToString() + " for " + m.generations + " generations.");
+                o.SetTimer((m.initialGeneration + m.generations - generation).ToString());
                 malusObjectives.Add(m);
             } else {
                 BonusObjective b = new BonusObjective(bonusScore, random);
                 ObjectiveHandler o = FindVoidSlot(b);
                 o.SetObjective("Get " + b.strength.ToString() + " " + b.gene.ToString() + " in your " + b.slot.ToString() + ".");
+                o.SetTimer("");
                 bonusObjectives.Add(b);
             }
         }

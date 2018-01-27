@@ -11,6 +11,9 @@ public class MalusObjective : Objective {
         var slotArray = Enum.GetValues(typeof(Slot));
         slot = (Slot)slotArray.GetValue(random.Next(slotArray.Length));
         // Assign a strength to the objective.
+        var geneArray = Enum.GetValues(typeof(Gene.RPS));
+        gene = (Gene.RPS)geneArray.GetValue(random.Next(geneArray.Length - 1));
+        // Assign a strength to the objective.
         generations = random.Next(minGen, maxGen);
         // Set the other fields.
         bonus = b * generations;

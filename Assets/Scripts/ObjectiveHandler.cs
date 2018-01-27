@@ -17,7 +17,7 @@ public class ObjectiveHandler : MonoBehaviour {
     }
 
     public void SetTimer(string s) {
-        geneRequestText.text = s;
+        timerText.text = s;
     }
 
 }

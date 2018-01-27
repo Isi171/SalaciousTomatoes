@@ -11,6 +11,9 @@ public class BonusObjective : Objective {
         // Assign a strength to the objective.
         var strengthArray = Enum.GetValues(typeof(Gene.Strength));
         strength = (Gene.Strength)strengthArray.GetValue(random.Next(strengthArray.Length));
+        // Assign a strength to the objective.
+        var geneArray = Enum.GetValues(typeof(Gene.RPS));
+        gene = (Gene.RPS)geneArray.GetValue(random.Next(geneArray.Length - 1));
         // Set the other fields.
         bonus = b;
     }
