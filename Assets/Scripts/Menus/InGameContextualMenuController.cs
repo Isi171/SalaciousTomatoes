@@ -7,18 +7,21 @@ public class InGameContextualMenuController : MonoBehaviour
 {
     public InputHandler inputHandler;
     public RectTransform panel;
+	public GameObject menuBackdrop;
     
     public void Pause()
     {
         Time.timeScale = 0;
-        panel.localScale = new Vector3(1, 1, 1);
+		panel.localScale = new Vector3 (1, 1, 1);
+		menuBackdrop.transform.localScale = new Vector3 (1, 1, 1);
         inputHandler.stopInput = true;
     }
 
     public void Unpause()
     {
         Time.timeScale = 1;
-        panel.localScale = new Vector3(0, 0, 1);
+		panel.localScale = new Vector3(0, 0, 1);
+		menuBackdrop.transform.localScale = new Vector3 (0, 0, 1);
         inputHandler.stopInput = false;
     }
 

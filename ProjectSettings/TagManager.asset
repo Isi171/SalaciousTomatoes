@@ -52,3 +52,9 @@ TagManager:
   - name: Monster
     uniqueID: 1783986907
     locked: 0
+  - name: UI
+    uniqueID: 3467327811
+    locked: 0
+  - name: ContextualMenus
+    uniqueID: 3511090647
+    locked: 0
