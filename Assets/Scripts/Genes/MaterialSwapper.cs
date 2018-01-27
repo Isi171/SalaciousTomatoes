@@ -12,11 +12,11 @@ public class MaterialSwapper : MonoBehaviour {
 	void Start () {
 		smr = GetComponent<SkinnedMeshRenderer> ();
 		if (bpt == BodyPartType.Arms) {
-			associator = GameObject.FindGameObjectWithTag ("ArmsAssociator").GetComponent<RPStoMaterial_ARMS>();
+			associator = GameObject.FindGameObjectWithTag ("ArmsAssociator").GetComponent<RPStoMaterial>();
 		} else if (bpt == BodyPartType.Body) {
-			associator = GameObject.FindGameObjectWithTag ("BodyAssociator").GetComponent<RPStoMaterial_ARMS>();
+			associator = GameObject.FindGameObjectWithTag ("BodyAssociator").GetComponent<RPStoMaterial>();
 		} else if (bpt == BodyPartType.Head) {
-			associator = GameObject.FindGameObjectWithTag ("HeadAssociator").GetComponent<RPStoMaterial_ARMS>();
+			associator = GameObject.FindGameObjectWithTag ("HeadAssociator").GetComponent<RPStoMaterial>();
 		}
 		currentGene = new Gene (Gene.RPS.Zero, Gene.Strength.Small);
 		SwapMaterial ();
@@ -30,6 +30,5 @@ public class MaterialSwapper : MonoBehaviour {
 	}
 
 	void SwapMaterial (){
-		associator
 	}
 }
