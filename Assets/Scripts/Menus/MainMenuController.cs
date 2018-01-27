@@ -4,7 +4,6 @@ using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
-    private static readonly System.Random random = new System.Random();
     [SerializeField] private Text highscoreTitle;
     [SerializeField] private Text highscore;
     private readonly string[] highscoreTitles =
@@ -18,7 +17,7 @@ public class MainMenuController : MonoBehaviour
     
     private void Start()
     {
-        highscoreTitle.text = highscoreTitles[random.Next(highscoreTitles.Length)];
+        highscoreTitle.text = highscoreTitles[CustomRandom.Next(highscoreTitles.Length)];
         highscore.text = PlayerPrefs.GetInt("Highscore").ToString();
     }
     
