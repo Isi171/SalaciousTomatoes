@@ -154,7 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b8debd3b1eba843acd6b056039659d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpt: 0
 --- !u!137 &294507097
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -415,7 +414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b8debd3b1eba843acd6b056039659d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpt: 1
 --- !u!137 &524891522
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -770,9 +768,9 @@ MonoBehaviour:
   - {fileID: 1834960426}
   - {fileID: 1778842988}
   - {fileID: 979366071}
-  bonusScore: 300
+  bonusScore: 20
   malusProbability: 0.5
-  malusScore: 100
+  malusScore: 50
   malusPenalty: -500
   malusMinGenerations: 1
   malusMaxGenerations: 5
@@ -1181,7 +1179,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b8debd3b1eba843acd6b056039659d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpt: 0
 --- !u!137 &1621707685
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1295,7 +1292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b8debd3b1eba843acd6b056039659d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpt: 2
 --- !u!137 &1647806493
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1404,7 +1400,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b8debd3b1eba843acd6b056039659d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpt: 1
 --- !u!137 &1691560452
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1667,7 +1662,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9b8debd3b1eba843acd6b056039659d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpt: 2
 --- !u!137 &1798986198
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

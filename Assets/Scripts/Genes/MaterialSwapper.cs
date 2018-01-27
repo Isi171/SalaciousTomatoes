@@ -5,25 +5,25 @@ using UnityEngine;
 
 public class MaterialSwapper : MonoBehaviour {
 	private static System.Random random = new System.Random ();
-	SkinnedMeshRenderer smr;
-	public enum BodyPartType {Limbs, Body, Head};
-	public BodyPartType bpt;
-	RPStoMaterial associator;
+	//SkinnedMeshRenderer smr;
+	//public enum BodyPartType {Limbs, Body, Head};
+	//public BodyPartType bpt;
+	//RPStoMaterial associator;
 	Gene currentGene;
 	MaterialAnimator ma;
 	
 	// Use this for initialization
 	void Start ()
 	{
-		smr = GetComponent<SkinnedMeshRenderer> ();
+		//smr = GetComponent<SkinnedMeshRenderer> ();
 		ma = GetComponent<MaterialAnimator> ();
-		if (bpt == BodyPartType.Limbs) {
+		/*if (bpt == BodyPartType.Limbs) {
 			associator = GameObject.FindGameObjectWithTag ("LimbsAssociator").GetComponent<RPStoMaterial>();
 		} else if (bpt == BodyPartType.Body) {
 			associator = GameObject.FindGameObjectWithTag ("BodyAssociator").GetComponent<RPStoMaterial>();
 		} else if (bpt == BodyPartType.Head) {
 			associator = GameObject.FindGameObjectWithTag ("HeadAssociator").GetComponent<RPStoMaterial>();
-		}
+		}*/
 		currentGene = new Gene (Gene.RPS.Zero, Gene.Strength.Small);
 		//smr.material=associator.Associate (currentGene); //associator... ASSOCIATE!
 		ma.SetMaterial (currentGene);
