@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Backdrop
+    uniqueID: 619798981
+    locked: 0
+  - name: Monster
+    uniqueID: 1783986907
+    locked: 0
