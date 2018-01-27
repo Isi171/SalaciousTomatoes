@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.CodeDom;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -42,8 +43,8 @@ public class ObjectiveManager : MonoBehaviour {
 
     private void Update() {
         float residualTime = gameDuration - Time.time - initialTime;
-        float minutes = Mathf.Floor(residualTime / 60);
-        float seconds = Mathf.RoundToInt(residualTime % 60);
+        int minutes = (int)Mathf.Floor(residualTime / 60);
+        int seconds = Mathf.RoundToInt(residualTime % 60);
         if (seconds == 60) {
             minutes++;
             seconds = 0;
@@ -96,10 +97,10 @@ public class ObjectiveManager : MonoBehaviour {
 
         bonusObjectives.RemoveAll(o => completedBonus.Contains(o));
         malusObjectives.RemoveAll(o => completedMalus.Contains(o));
-
         completedBonus.Clear();
         completedMalus.Clear();
 
+        DecreaseTimers();
         GenerateObjectives();
     }
 
@@ -153,6 +154,17 @@ public class ObjectiveManager : MonoBehaviour {
             if (o.objective == objective) {
                 o.objective = null;
                 break;
+            }
+        }
+    }
+
+    private void DecreaseTimers()
+    {
+        foreach (ObjectiveHandler o in handlers) {
+            if (o.objective is MalusObjective)
+            {
+                ((MalusObjective) o.objective).counter--;
+                o.timerText.text = ((MalusObjective) o.objective).counter.ToString();
             }
         }
     }

@@ -5,6 +5,7 @@ public class MalusObjective : Objective {
     public int generations;
     public int malus;
     public int initialGeneration;
+    public int counter;
 
     public MalusObjective(int minGen, int maxGen, int b, int m, int g, Random random) {
         // Assign a slot to the objective.
@@ -15,6 +16,7 @@ public class MalusObjective : Objective {
         gene = (Gene.RPS)geneArray.GetValue(random.Next(geneArray.Length - 1));
         // Assign a strength to the objective.
         generations = random.Next(minGen, maxGen);
+        counter = generations;
         // Set the other fields.
         bonus = b * generations;
         malus = m;

@@ -154,7 +154,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bpt: 0
-  meshRenderer: {fileID: 294507097}
 --- !u!137 &294507097
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -395,7 +394,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bpt: 1
-  meshRenderer: {fileID: 524891522}
 --- !u!137 &524891522
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1141,7 +1139,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bpt: 0
-  meshRenderer: {fileID: 1621707685}
 --- !u!137 &1621707685
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1235,7 +1232,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bpt: 2
-  meshRenderer: {fileID: 1647806493}
 --- !u!137 &1647806493
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1324,7 +1320,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bpt: 1
-  meshRenderer: {fileID: 1691560452}
 --- !u!137 &1691560452
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1567,7 +1562,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bpt: 2
-  meshRenderer: {fileID: 1798986198}
 --- !u!137 &1798986198
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
