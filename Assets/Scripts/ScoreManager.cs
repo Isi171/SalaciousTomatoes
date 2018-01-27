@@ -1,22 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
 
-    [SerializeField] private GameObject highScore;
+    private static readonly System.Random random = new System.Random();
+    [SerializeField] private RectTransform highScore;
     [SerializeField] private Text score;
+    [SerializeField] private Text thankYou;
 
-    void Start () {
+    private string[] thankYous =
+    {
+        "Thank you for playing",
+        "Your performance was adequate",
+        "Science thanks you for your collaboration",
+        "You saved Science!",
+        "For Science. You monster.",
+        "This has been a social experiment",
+        "This has been a SUCCESSFUL social experiment",
+        "Help! I am trapped inside the source code!",
+        "In his house at R'lyeh, dead Cthulhu waits dreaming",
+        "We both did a lot of things that you are going to regret",
+        "You won! Or did you?",
+        "From great Power comes great Current squared Resistance",
+        "Here's to hoping the project lead never sees this...",
+        "You did very good today",
+        "Will anyone ever even read this?"
+    };
+    
+    void Start ()
+    {
+        thankYou.text = thankYous[random.Next(thankYous.Length)];
         int lastScore = PlayerPrefs.GetInt("Score");
 
         score.text = lastScore.ToString();
 
         if (lastScore > PlayerPrefs.GetInt("Highscore", 0)) {
-            highScore.SetActive(true);
             PlayerPrefs.SetInt("Highscore", lastScore);
+            highScore.localScale = new Vector3(1, 1, 1);
         }
     }
 
