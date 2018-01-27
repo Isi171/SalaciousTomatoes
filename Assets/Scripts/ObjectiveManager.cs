@@ -154,7 +154,12 @@ public class ObjectiveManager : MonoBehaviour {
 
             }
             else {
-                BonusObjective b = new BonusObjective(bonusScore, random, bonusObjectives);
+                BonusObjective b;
+                do
+                {
+                    b = new BonusObjective(bonusScore, random, bonusObjectives);
+                } while (isObjectiveInConflict(b, head, body, limbs));
+
                 ObjectiveHandler o = FindVoidSlot(b);
                 o.SetObjective("Get " /*+ b.strength.ToString() + " "*/ + b.gene.ToString() + " in your " + b.slot.ToString() + ".");
                 o.SetTimer("");
