@@ -7,6 +7,8 @@ TagManager:
   - ArmsAssociator
   - BodyAssociator
   - HeadAssociator
+  - NewMonster
+  - CurrentMonster
   layers:
   - Default
   - TransparentFX

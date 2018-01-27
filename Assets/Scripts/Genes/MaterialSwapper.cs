@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MaterialSwapper : MonoBehaviour {
+	private static System.Random random = new System.Random ();
 	SkinnedMeshRenderer smr;
 	public enum BodyPartType {Arms, Body, Head};
 	public BodyPartType bpt;
@@ -27,5 +29,14 @@ public class MaterialSwapper : MonoBehaviour {
 			currentGene = newGene;
 		}
 		smr.material=associator.Associate (currentGene);
+	}
+
+	public void Randomize(){
+		var geneArray = Enum.GetValues(typeof(Gene.RPS));
+		Gene.RPS rps = (Gene.RPS)geneArray.GetValue(random.Next(geneArray.Length));
+		var strengthArray = Enum.GetValues(typeof(Gene.Strength));
+		Gene.Strength strength = (Gene.Strength)strengthArray.GetValue(random.Next(strengthArray.Length));
+		currentGene = new Gene (rps, strength);
+		smr.material = associator.Associate (currentGene);
 	}
 }
