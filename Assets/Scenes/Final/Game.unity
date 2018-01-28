@@ -2581,10 +2581,6 @@ Prefab:
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1372466569738866, guid: 635049acab1864a9d8d0ca4786ac4417, type: 2}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1372466569738866, guid: 635049acab1864a9d8d0ca4786ac4417, type: 2}
       propertyPath: m_Name
       value: ObjectiveCard1
       objectReference: {fileID: 0}
