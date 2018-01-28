@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class ObjectiveManager : MonoBehaviour {
 
-    private Combine combine;
-
     [SerializeField] private int gameDuration;
 
     [Header("Objectives")] [SerializeField] private int activeObjectives;
@@ -33,10 +31,6 @@ public class ObjectiveManager : MonoBehaviour {
     private float initialTime;
 
     System.Random random = new System.Random();
-
-    public void SetCombine(Combine combine){
-        this.combine = combine;
-    }
 
     void Start() {
         GenerateObjectives();

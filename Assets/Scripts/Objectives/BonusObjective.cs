@@ -17,9 +17,6 @@ public class BonusObjective : Objective {
         int slotIndex = random.Next(slotList.Count);
 
         slot = slotList[slotIndex];
-
-        // Assign a slot to the objective.
-        var slotArray = Enum.GetValues(typeof(Slot));
                       
         // Assign a strength to the objective.
         var strengthArray = Enum.GetValues(typeof(Gene.Strength));

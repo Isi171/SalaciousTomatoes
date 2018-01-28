@@ -22,10 +22,6 @@ public class Combine : MonoBehaviour {
             return currentBody.CurrentGene;
     }
 
-    void Start (){
-        objectiveManager.SetCombine(this);
-    }
-
 	public void PressButton (){
 		currentLimbs.GeneLogic (newLimbs.CurrentGene);
 		currentBody.GeneLogic (newBody.CurrentGene);
