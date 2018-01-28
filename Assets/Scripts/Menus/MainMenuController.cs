@@ -18,11 +18,27 @@ public class MainMenuController : MonoBehaviour
         "Ectobiological recombinations performed",
         "Traits inherited"
     };
+
+	public Button sound;
+	public Button music;
+	public Sprite soundButtonSpriteActive;
+	public Sprite soundButtonSpriteInactive;
+	public Sprite musicButtonSpriteActive;
+	public Sprite musicButtonSpriteInactive;
+		
     
     private void Start()
     {
         highscoreTitle.text = CustomRandom.From(highscoreTitles);
         highscore.text = PlayerPrefs.GetInt("Highscore").ToString();
+		if (VolumeHandler.Music)
+			music.GetComponent<Image> ().sprite = musicButtonSpriteActive;
+		else
+			music.GetComponent<Image> ().sprite = musicButtonSpriteInactive;
+		if (VolumeHandler.Sfx)
+			sound.GetComponent<Image> ().sprite = soundButtonSpriteActive;
+		else
+			sound.GetComponent<Image> ().sprite = soundButtonSpriteInactive;
     }
     
     public void Play()
@@ -38,10 +54,18 @@ public class MainMenuController : MonoBehaviour
     public void Music()
     {
 		VolumeHandler.Music = !VolumeHandler.Music;
+		if (VolumeHandler.Music)
+			music.GetComponent<Image> ().sprite = musicButtonSpriteActive;
+		else
+			music.GetComponent<Image> ().sprite = musicButtonSpriteInactive;
     }
 
     public void Sound()
     {
 		VolumeHandler.Sfx = !VolumeHandler.Sfx;
+		if (VolumeHandler.Sfx)
+			sound.GetComponent<Image> ().sprite = soundButtonSpriteActive;
+		else
+			sound.GetComponent<Image> ().sprite = soundButtonSpriteInactive;
     }    
 }

@@ -1,6 +1,4 @@
-import os
- 
-genMaterial = lambda x: r'''%YAML 1.1
+%YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
@@ -8,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Arms 02
+  m_Name: head00
   m_Shader: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords:
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -45,7 +43,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: '''+x+''', type: 3}
+        m_Texture: {fileID: 2800000, guid: 9d9c262e43e798c47beb4b47eb60f5fb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -84,19 +82,3 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-'''
- 
-IMG_DIR = 'Input'
- 
-MAT_DIR = 'Output'
- 
-images_metas = os.listdir(IMG_DIR)
- 
-for meta in images_metas:
-    if (meta.split('.')[-1]=='meta'):
-        with open(IMG_DIR+'/'+meta) as f:
-            f.readline()
-            guid = f.readline().split(':')[1].strip()
- 
-            with open(MAT_DIR+'/'+meta.split('.')[0]+'.mat', 'w') as f:
-                f.write(genMaterial(guid))
