@@ -7,13 +7,13 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Final/Menu.unity
-    guid: 9a2053d891e706647a438d1b4e14cb18
+    guid: e976bf703dea6da4cad50516b248247a
   - enabled: 1
     path: Assets/Scenes/Final/Game.unity
-    guid: 632b97f6a13389348959d3dd261f2337
+    guid: d7f194cd3c689aa44be511fa0121aab8
   - enabled: 1
     path: Assets/Scenes/Final/Score.unity
-    guid: f9d994f994f06934f80f64af277d2e8e
+    guid: 94a863b390757fd4a9357dcb42b71d9b
   - enabled: 1
     path: Assets/Scenes/Final/Credits.unity
     guid: 9fa38bd01fa3a42d48ed50f875e24ae3
