@@ -7,6 +7,14 @@ public class VolumeMiddleman : MonoBehaviour {
 	public AudioSource sfx;
 
 	void Start () {
+		if (VolumeHandler.Music)
+			music.volume = 1;
+		else
+			music.volume = 0;
+		if (VolumeHandler.Sfx)
+			sfx.volume = 1;
+		else
+			sfx.volume = 0;
 		VolumeHandler.MusicSource = music;
 		VolumeHandler.SfxSource = sfx;
 	}

@@ -4,12 +4,10 @@ using UnityEngine;
 
 public static class VolumeHandler {
 	// if true, the source is active
-	private static bool sfx;
-	private static bool music;
+	private static bool sfx = true;
+	private static bool music = true;
 	private static AudioSource musicSource;
 	private static AudioSource sfxSource;
-
-
 
 	public static bool Sfx {
 		get{ return sfx; }
