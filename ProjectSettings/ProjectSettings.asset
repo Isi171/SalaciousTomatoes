@@ -248,8 +248,8 @@ PlayerSettings:
   androidSplashScreen: {fileID: 2800000, guid: a030a9b9924154eafab198633d2b6bb8, type: 3}
   AndroidKeystoreName: 
   AndroidKeyaliasName: 
-  AndroidTVCompatibility: 1
-  AndroidIsGame: 1
+  AndroidTVCompatibility: 0
+  AndroidIsGame: 0
   AndroidEnableTango: 0
   androidEnableBanner: 1
   androidUseLowAccuracyLocation: 0
