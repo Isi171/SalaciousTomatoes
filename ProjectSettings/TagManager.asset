@@ -10,7 +10,7 @@ TagManager:
   - NewMonster
   - CurrentMonster
   - MusicSource
-  - AudioSource
+  - SFXSource
   layers:
   - Default
   - TransparentFX

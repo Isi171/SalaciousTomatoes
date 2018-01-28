@@ -64,23 +64,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1763427451610222
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 224443696391362388}
-  - component: {fileID: 222260038910413194}
-  - component: {fileID: 114201982143464214}
-  m_Layer: 5
-  m_Name: RequestText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &114016051800806700
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -100,7 +83,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 65f5405882183094bac498dc0cf1ac1e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: acb37ba2cb58546cb8a2d4dffc0a1c6a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -108,39 +91,6 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!114 &114201982143464214
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1763427451610222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: ee8779182f0554eccb38200d7754d0c4, type: 3}
-    m_FontSize: 100
-    m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 0
-    m_MaxSize: 300
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Gene request text
 --- !u!114 &114570249903767082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -201,9 +151,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 114640234795430102}
-  geneRequestText: {fileID: 114201982143464214}
   icon: {fileID: 114016051800806700}
   scoreTextHandler: {fileID: 114570249903767082}
+  headPurpleScissors: {fileID: 21300000, guid: 5b4a35e9910394fd88423cf8e17207d8, type: 3}
+  headGreenPaper: {fileID: 21300000, guid: acb37ba2cb58546cb8a2d4dffc0a1c6a, type: 3}
+  headYellowRock: {fileID: 21300000, guid: beecb864f4baa4a3eb52c746d37e9c28, type: 3}
+  bodyPurpleScissors: {fileID: 21300000, guid: dbeddc7af557844b6a7a47d3248eb470, type: 3}
+  bodyGreenPaper: {fileID: 21300000, guid: dac52825f43fc4f57a7968bdf40ae4cd, type: 3}
+  bodyYellowRock: {fileID: 21300000, guid: 335b0d5be33bc493d8f6e602cc0d7292, type: 3}
+  limbsPurpleScissors: {fileID: 21300000, guid: e462605b540d74e47904ed68eb5b0fdf,
+    type: 3}
+  limbsGreenPaper: {fileID: 21300000, guid: e9cac6c0500874519a911b35e08b8a83, type: 3}
+  limbsYellowRock: {fileID: 21300000, guid: b39a985b4f0434910831bb69adb15019, type: 3}
+  headPurpleScissorsNegative: {fileID: 21300000, guid: 1a7d3609572404269b50852a81a6521d,
+    type: 3}
+  headGreenPaperNegative: {fileID: 21300000, guid: 3b40347f048cc42dfa5b6e10ff8e67ff,
+    type: 3}
+  headYellowRockNegative: {fileID: 21300000, guid: 9d99fd7c423f8424998d7f039d196e13,
+    type: 3}
+  bodyPurpleScissorsNegative: {fileID: 21300000, guid: 6c6e235883a224bf99ba33f9eba99862,
+    type: 3}
+  bodyGreenPaperNegative: {fileID: 21300000, guid: 168994f246c374bf48393a544f02f31d,
+    type: 3}
+  bodyYellowRockNegative: {fileID: 21300000, guid: 852897b838a39451f97e12c5229329b0,
+    type: 3}
+  limbsPurpleScissorsNegative: {fileID: 21300000, guid: 19bfbee9ce02c430781296aadb2a7fe3,
+    type: 3}
+  limbsGreenPaperNegative: {fileID: 21300000, guid: bb5d15d49067f491c8744100064a14da,
+    type: 3}
+  limbsYellowRockNegative: {fileID: 21300000, guid: d6e0353581a7141c994f6c96490db33f,
+    type: 3}
 --- !u!114 &114968660734055376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,12 +214,6 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: +???
---- !u!222 &222260038910413194
-CanvasRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1763427451610222}
 --- !u!222 &222520684196071250
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -269,10 +240,10 @@ RectTransform:
   m_GameObject: {fileID: 1599447820073342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0009999, y: 1.0009999, z: 1.0009999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224244866069000958}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -289,7 +260,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 224443696391362388}
   - {fileID: 224079949968773924}
   - {fileID: 224999261191423016}
   m_Father: {fileID: 0}
@@ -299,24 +269,6 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -550, y: 0}
   m_SizeDelta: {x: 500, y: 500}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!224 &224443696391362388
-RectTransform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1763427451610222}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 224244866069000958}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 25}
-  m_SizeDelta: {x: -100, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224999261191423016
 RectTransform:
@@ -329,7 +281,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_Children: []
   m_Father: {fileID: 224244866069000958}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

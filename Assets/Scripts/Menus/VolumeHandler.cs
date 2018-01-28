@@ -25,10 +25,12 @@ public static class VolumeHandler {
 	}
 
 	public static AudioSource MusicSource{
+		get{ return musicSource; }
 		set{ musicSource = value; }
 	}
 
 	public static AudioSource SfxSource{
+		get{ return sfxSource; }
 		set{ sfxSource = value; }
 	}
 
