@@ -46,10 +46,11 @@ public class Gene
 		}
 		else if (currentGene.RpsValue == newGene.RpsValue)
 		{
-			//both gene types are the same; their strengths are compared.
-			if (currentGene.StrValue == newGene.StrValue)
+            return 0; //both genes have the same values and are of equal strength.
+                      //both gene types are the same; their strengths are compared.
+            /*if (currentGene.StrValue == newGene.StrValue)
 			{
-				return 0; //both genes have the same values and are of equal strength.
+				
 			}
 			else if (newGene.StrValue == Gene.Strength.Big)
 			{
@@ -70,7 +71,7 @@ public class Gene
 			{
 				//the new gene is small
 				return -1; //the new gene is small and the old gene is medium or big; the old gene is stronger.
-			}
+			}*/
 		}
 		else
 		{
