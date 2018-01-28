@@ -83,7 +83,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 65f5405882183094bac498dc0cf1ac1e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: acb37ba2cb58546cb8a2d4dffc0a1c6a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -151,27 +151,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 114640234795430102}
-  geneRequestText: {fileID: 0}
   icon: {fileID: 114016051800806700}
   scoreTextHandler: {fileID: 114570249903767082}
-  headPurpleScissors: {fileID: 0}
-  headGreenPaper: {fileID: 0}
-  headYellowRock: {fileID: 0}
-  bodyPurpleScissors: {fileID: 0}
-  bodyGreenPaper: {fileID: 0}
-  bodyYellowRock: {fileID: 0}
-  limbsPurpleScissors: {fileID: 0}
-  limbsGreenPaper: {fileID: 0}
-  limbsYellowRock: {fileID: 0}
-  headPurpleScissorsNegative: {fileID: 0}
-  headGreenPaperNegative: {fileID: 0}
-  headYellowRockNegative: {fileID: 0}
-  bodyPurpleScissorsNegative: {fileID: 0}
-  bodyGreenPaperNegative: {fileID: 0}
-  bodyYellowRockNegative: {fileID: 0}
-  limbsPurpleScissorsNegative: {fileID: 0}
-  limbsGreenPaperNegative: {fileID: 0}
-  limbsYellowRockNegative: {fileID: 0}
+  headPurpleScissors: {fileID: 21300000, guid: 5b4a35e9910394fd88423cf8e17207d8, type: 3}
+  headGreenPaper: {fileID: 21300000, guid: acb37ba2cb58546cb8a2d4dffc0a1c6a, type: 3}
+  headYellowRock: {fileID: 21300000, guid: beecb864f4baa4a3eb52c746d37e9c28, type: 3}
+  bodyPurpleScissors: {fileID: 21300000, guid: dbeddc7af557844b6a7a47d3248eb470, type: 3}
+  bodyGreenPaper: {fileID: 21300000, guid: dac52825f43fc4f57a7968bdf40ae4cd, type: 3}
+  bodyYellowRock: {fileID: 21300000, guid: 335b0d5be33bc493d8f6e602cc0d7292, type: 3}
+  limbsPurpleScissors: {fileID: 21300000, guid: e462605b540d74e47904ed68eb5b0fdf,
+    type: 3}
+  limbsGreenPaper: {fileID: 21300000, guid: e9cac6c0500874519a911b35e08b8a83, type: 3}
+  limbsYellowRock: {fileID: 21300000, guid: b39a985b4f0434910831bb69adb15019, type: 3}
+  headPurpleScissorsNegative: {fileID: 21300000, guid: 1a7d3609572404269b50852a81a6521d,
+    type: 3}
+  headGreenPaperNegative: {fileID: 21300000, guid: 3b40347f048cc42dfa5b6e10ff8e67ff,
+    type: 3}
+  headYellowRockNegative: {fileID: 21300000, guid: 9d99fd7c423f8424998d7f039d196e13,
+    type: 3}
+  bodyPurpleScissorsNegative: {fileID: 21300000, guid: 6c6e235883a224bf99ba33f9eba99862,
+    type: 3}
+  bodyGreenPaperNegative: {fileID: 21300000, guid: 168994f246c374bf48393a544f02f31d,
+    type: 3}
+  bodyYellowRockNegative: {fileID: 21300000, guid: 852897b838a39451f97e12c5229329b0,
+    type: 3}
+  limbsPurpleScissorsNegative: {fileID: 21300000, guid: 19bfbee9ce02c430781296aadb2a7fe3,
+    type: 3}
+  limbsGreenPaperNegative: {fileID: 21300000, guid: bb5d15d49067f491c8744100064a14da,
+    type: 3}
+  limbsYellowRockNegative: {fileID: 21300000, guid: d6e0353581a7141c994f6c96490db33f,
+    type: 3}
 --- !u!114 &114968660734055376
 MonoBehaviour:
   m_ObjectHideFlags: 1
