@@ -25,6 +25,7 @@ public class MainMenuController : MonoBehaviour
 	public Sprite soundButtonSpriteInactive;
 	public Sprite musicButtonSpriteActive;
 	public Sprite musicButtonSpriteInactive;
+	public AudioClip ac_Tap;
 		
     
     private void Start()
@@ -43,16 +44,19 @@ public class MainMenuController : MonoBehaviour
     
     public void Play()
     {
-        SceneManager.LoadScene("Game");
+		VolumeHandler.SfxSource.PlayOneShot (ac_Tap, 1);
+		SceneManager.LoadScene("Game(WithSoundManagement)");
     }
     
     public void Credits()
-    {
+	{
+		VolumeHandler.SfxSource.PlayOneShot (ac_Tap, 1);
         SceneManager.LoadScene("Credits");
     }
 
     public void Music()
-    {
+	{
+		VolumeHandler.SfxSource.PlayOneShot (ac_Tap, 1);
 		VolumeHandler.Music = !VolumeHandler.Music;
 		if (VolumeHandler.Music)
 			music.sprite = musicButtonSpriteActive;
@@ -61,7 +65,8 @@ public class MainMenuController : MonoBehaviour
     }
 
     public void Sound()
-    {
+	{
+		VolumeHandler.SfxSource.PlayOneShot (ac_Tap, 1);
 		VolumeHandler.Sfx = !VolumeHandler.Sfx;
 		if (VolumeHandler.Sfx)
 			sound.sprite = soundButtonSpriteActive;

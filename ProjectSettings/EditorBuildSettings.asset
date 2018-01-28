@@ -4,4 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Final/Game(WithSoundManagement).unity
+    guid: 55663349256424b82922c4feef8b4c0a
+  - enabled: 1
+    path: Assets/Scenes/Final/Menu.unity
+    guid: e976bf703dea6da4cad50516b248247a
+  - enabled: 1
+    path: Assets/Scenes/Final/Score.unity
+    guid: 94a863b390757fd4a9357dcb42b71d9b
+  - enabled: 1
+    path: Assets/Scenes/Final/Credits.unity
+    guid: 9fa38bd01fa3a42d48ed50f875e24ae3
