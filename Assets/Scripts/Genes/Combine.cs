@@ -5,12 +5,12 @@ using UnityEngine;
 public class Combine : MonoBehaviour {
 	public ObjectiveManager objectiveManager;
 	public Randomize randomizer;
-	MaterialSwapper currentLimbs;
-	MaterialSwapper currentBody;
-	MaterialSwapper currentHead;
-	MaterialSwapper newLimbs;
-	MaterialSwapper newBody;
-	MaterialSwapper newHead;
+	[SerializeField] MaterialSwapper currentLimbs;
+    [SerializeField] MaterialSwapper currentBody;
+    [SerializeField] MaterialSwapper currentHead;
+    [SerializeField] MaterialSwapper newLimbs;
+    [SerializeField] MaterialSwapper newBody;
+    [SerializeField] MaterialSwapper newHead;
 
     public Gene GetGene(Objective.Slot s){
 
@@ -23,12 +23,6 @@ public class Combine : MonoBehaviour {
     }
 
     void Start (){
-		currentLimbs = GameObject.FindGameObjectWithTag ("CurrentMonster").transform.Find ("Limbs").gameObject.GetComponent<MaterialSwapper>();
-		currentBody = GameObject.FindGameObjectWithTag ("CurrentMonster").transform.Find ("Body").gameObject.GetComponent<MaterialSwapper>();
-		currentHead = GameObject.FindGameObjectWithTag ("CurrentMonster").transform.Find ("Head").gameObject.GetComponent<MaterialSwapper>();
-		newLimbs = GameObject.FindGameObjectWithTag ("NewMonster").transform.Find ("Limbs").gameObject.GetComponent<MaterialSwapper>();
-		newBody = GameObject.FindGameObjectWithTag ("NewMonster").transform.Find ("Body").gameObject.GetComponent<MaterialSwapper>();
-		newHead = GameObject.FindGameObjectWithTag ("NewMonster").transform.Find ("Head").gameObject.GetComponent<MaterialSwapper>();
         objectiveManager.SetCombine(this);
     }
 
