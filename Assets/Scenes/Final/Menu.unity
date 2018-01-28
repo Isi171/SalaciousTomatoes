@@ -534,8 +534,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c78851056664f85af25a98b8bc7306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highscoreTitle: {fileID: 612874034}
-  highscore: {fileID: 309217572}
   sound: {fileID: 1510778094}
   music: {fileID: 734067520}
   soundButtonSpriteActive: {fileID: 21300000, guid: 3981a4c0ec842354db4892930e9b9f7e,
@@ -546,6 +544,7 @@ MonoBehaviour:
     type: 3}
   musicButtonSpriteInactive: {fileID: 21300000, guid: 6a9278980c92461429d331071eef0e61,
     type: 3}
+  tap: {fileID: 8300000, guid: 019a7e230e5316342a57b0fc0c684acb, type: 3}
 --- !u!114 &559956755
 MonoBehaviour:
   m_ObjectHideFlags: 0

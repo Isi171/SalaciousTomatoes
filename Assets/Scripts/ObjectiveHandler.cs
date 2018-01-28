@@ -5,6 +5,7 @@ public class ObjectiveHandler : MonoBehaviour {
     public Text timerText;
     [SerializeField] private Image icon;
     [SerializeField] private ScoreTextHandler scoreTextHandler;
+    [SerializeField] private RectTransform timerBackground;
     
     [Header("Objectives Sprites Positive")]
     [SerializeField] private Sprite headPurpleScissors;
@@ -33,6 +34,14 @@ public class ObjectiveHandler : MonoBehaviour {
     public void SetTimer(string counter)
     {
         timerText.text = counter;
+        if (counter.Equals(""))
+        {
+            timerBackground.localScale = new Vector3(0, 0, 1);
+        }
+        else
+        {
+            timerBackground.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     public void TriggerScore(int amount)

@@ -434,6 +434,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditsTitle: {fileID: 544973168}
+  tap: {fileID: 8300000, guid: 019a7e230e5316342a57b0fc0c684acb, type: 3}
 --- !u!222 &559956756
 CanvasRenderer:
   m_ObjectHideFlags: 0

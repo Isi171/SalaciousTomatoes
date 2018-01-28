@@ -42,7 +42,7 @@ public class ScoreTextHandler : MonoBehaviour
 
     public void TriggerScore(int amount)
     {
-        scoreText.text = amount.ToString();
+        scoreText.text = amount > 0 ? "+" + amount : amount.ToString();
         running = true;
         scoreTextRectTransform.localScale = new Vector3(1, 1, 1);
         scoreTextRectTransform.localPosition = scoreTextOriginalPosition;

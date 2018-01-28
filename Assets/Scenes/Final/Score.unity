@@ -156,6 +156,7 @@ MonoBehaviour:
   congratulationsHighscore: {fileID: 1650435895}
   score: {fileID: 935784515}
   thankYou: {fileID: 1621926764}
+  tap: {fileID: 8300000, guid: 019a7e230e5316342a57b0fc0c684acb, type: 3}
 --- !u!1 &316150349
 GameObject:
   m_ObjectHideFlags: 0
