@@ -154,7 +154,7 @@ public class ObjectiveManager : MonoBehaviour {
                 } while (isObjectiveInConflict(m,head,body,limbs));
 
                 ObjectiveHandler o = FindVoidSlot(m);
-                o.SetObjective("Avoid " + m.gene.ToString() + " in your " + m.slot.ToString() + " for " + m.generations + " generations.");
+                o.SetObjective(m.gene, m.slot, false);
                 o.SetTimer((m.initialGeneration + m.generations - generation).ToString());
                 malusObjectives.Add(m);
 
@@ -167,7 +167,7 @@ public class ObjectiveManager : MonoBehaviour {
                 } while (isObjectiveInConflict(b, head, body, limbs));
 
                 ObjectiveHandler o = FindVoidSlot(b);
-                o.SetObjective("Get " /*+ b.strength.ToString() + " "*/ + b.gene.ToString() + " in your " + b.slot.ToString() + ".");
+                o.SetObjective(b.gene, b.slot, true);
                 o.SetTimer("");
                 bonusObjectives.Add(b);
             }
