@@ -9,6 +9,8 @@ TagManager:
   - HeadAssociator
   - NewMonster
   - CurrentMonster
+  - MusicSource
+  - AudioSource
   layers:
   - Default
   - TransparentFX

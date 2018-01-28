@@ -114,15 +114,18 @@ public class ObjectiveManager : MonoBehaviour {
         GenerateObjectives(head, body, limbs);
     }
 
-    private void CompleteBonus(BonusObjective o) {
+    private void CompleteBonus(BonusObjective o)
+    {
         completedBonus.Add(o);
         UpdateScore(o.bonus);
+        TriggerScorePopup(o);
         RemoveFromSlot(o);
     }
 
     private void CompleteMalus(MalusObjective o, bool success) {
         completedMalus.Add(o);
         UpdateScore(success ? o.bonus : o.malus);
+        TriggerScorePopup(o, !success);
         RemoveFromSlot(o);
     }
 
@@ -176,11 +179,11 @@ public class ObjectiveManager : MonoBehaviour {
         if (head == null)
             return false;
 
-        if (o.slot.Equals(Objective.Slot.Head) && o.gene.Equals(head))
+        if (o.slot == Objective.Slot.Head && o.gene == head.RpsValue)
             return true;
-        else if (o.slot.Equals(Objective.Slot.Body) && o.gene.Equals(body))
+        else if (o.slot == Objective.Slot.Body && o.gene == body.RpsValue)
             return true;
-        else if (o.slot.Equals(Objective.Slot.Limbs) && o.gene.Equals(limbs))
+        else if (o.slot == Objective.Slot.Limbs && o.gene == limbs.RpsValue)
             return true;
         else
             return false;            
@@ -222,6 +225,24 @@ public class ObjectiveManager : MonoBehaviour {
     private static float TimeSinceStart()
     {
         return Time.timeSinceLevelLoad;
+    }
+
+    private void TriggerScorePopup(Objective o, bool useMalus = false)
+    {
+        foreach (ObjectiveHandler handler in handlers)
+        {
+            if (handler.objective == o)
+            {
+                if (useMalus)
+                {
+                    handler.TriggerScore(((MalusObjective)o).malus);
+                }
+                else
+                {
+                    handler.TriggerScore(o.bonus);
+                }
+            }
+        }
     }
 
 }

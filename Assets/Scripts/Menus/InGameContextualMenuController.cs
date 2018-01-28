@@ -33,11 +33,11 @@ public class InGameContextualMenuController : MonoBehaviour
 
     public void Music()
     {
-        
+			VolumeHandler.Music = !VolumeHandler.Music;
     }
 
     public void Sound()
-    {
-        
+	{
+		VolumeHandler.Sfx = !VolumeHandler.Sfx;
     }
 }
