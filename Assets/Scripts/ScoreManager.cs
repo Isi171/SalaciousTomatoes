@@ -4,7 +4,10 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour {
 
-    [SerializeField] private RectTransform highScore;
+    [SerializeField]
+    private Text highScoreValue;
+
+    [SerializeField] private Text congratulationsHighscore;
     [SerializeField] private Text score;
     [SerializeField] private Text thankYou;
 
@@ -29,14 +32,16 @@ public class ScoreManager : MonoBehaviour {
     
     void Start ()
     {
+        highScoreValue.text = "Highscore: " + PlayerPrefs.GetInt("Highscore").ToString();
+
         thankYou.text = CustomRandom.From(thankYous);
         int lastScore = PlayerPrefs.GetInt("Score");
 
         score.text = lastScore.ToString();
 
-        if (lastScore > PlayerPrefs.GetInt("Highscore", 0)) {
+        if (lastScore >= PlayerPrefs.GetInt("Highscore", 0)) {
             PlayerPrefs.SetInt("Highscore", lastScore);
-            highScore.localScale = new Vector3(1, 1, 1);
+            congratulationsHighscore.text = "NEW HIGH SCORE!";
         }
     }
 
