@@ -9,8 +9,8 @@ public class InGameContextualMenuController : MonoBehaviour
     public InputHandler inputHandler;
     public RectTransform panel;
 	public GameObject menuBackdrop;
-	public Button sound;
-	public Button music;
+    public Image soundIcon;
+	public Image musicIcon;
 	public Sprite soundButtonSpriteActive;
 	public Sprite soundButtonSpriteInactive;
 	public Sprite musicButtonSpriteActive;
@@ -19,13 +19,13 @@ public class InGameContextualMenuController : MonoBehaviour
     
 	void Start(){
 		if (VolumeHandler.Music)
-			music.GetComponent<Image> ().sprite = musicButtonSpriteActive;
+			musicIcon.sprite = musicButtonSpriteActive;
 		else
-			music.GetComponent<Image> ().sprite = musicButtonSpriteInactive;
+			musicIcon.sprite = musicButtonSpriteInactive;
 		if (VolumeHandler.Sfx)
-			sound.GetComponent<Image> ().sprite = soundButtonSpriteActive;
+			soundIcon.sprite = soundButtonSpriteActive;
 		else
-			sound.GetComponent<Image> ().sprite = soundButtonSpriteInactive;
+			soundIcon.sprite = soundButtonSpriteInactive;
 	}
 
     public void Pause()
@@ -58,9 +58,9 @@ public class InGameContextualMenuController : MonoBehaviour
 	    VolumeHandler.SfxSource.PlayOneShot (tap, 1);
 		VolumeHandler.Music = !VolumeHandler.Music;
 		if (VolumeHandler.Music)
-			music.GetComponent<Image> ().sprite = musicButtonSpriteActive;
+			musicIcon.sprite = musicButtonSpriteActive;
 		else
-			music.GetComponent<Image> ().sprite = musicButtonSpriteInactive;
+			musicIcon.sprite = musicButtonSpriteInactive;
     }
 
     public void Sound()
@@ -68,8 +68,8 @@ public class InGameContextualMenuController : MonoBehaviour
 		VolumeHandler.SfxSource.PlayOneShot (tap, 1);
 		VolumeHandler.Sfx = !VolumeHandler.Sfx;
 		if (VolumeHandler.Sfx)
-			sound.GetComponent<Image> ().sprite = soundButtonSpriteActive;
+			soundIcon.sprite = soundButtonSpriteActive;
 		else
-			sound.GetComponent<Image> ().sprite = soundButtonSpriteInactive;
+			soundIcon.sprite = soundButtonSpriteInactive;
     }
 }
