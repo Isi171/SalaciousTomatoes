@@ -9,6 +9,11 @@ public class AnimatorSound : MonoBehaviour
 
 	public void PlaySfx()
 	{
-		VolumeHandler.SfxSource.PlayOneShot(sfx, 1	);
+		VolumeHandler.SfxSource.PlayOneShot(sfx, 1);
+	}
+
+	public void PlaySfxAmp()
+	{
+		VolumeHandler.SfxSource.PlayOneShot(sfx, 3);
 	}
 }

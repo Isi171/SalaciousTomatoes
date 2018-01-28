@@ -576,27 +576,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Filippo Agalbato
-
-    Marco Ballabio
-
-    Leonardo Codamo
-
-    Lorenzo De Simone
-
-    Giulia Barnaba
-
-    Andrea Jegher
-
-    Federico Modica
-
-    Ernest Nemirovsky
-
-    Antonio Notarangelo
-
-    Cecilia Nunez
-
-    Teodora Tasic'
+  m_Text: "Filippo Agalbato\nMarco Ballabio\nLeonardo Codamo\nLorenzo De Simone\nGiulia
+    Barnaba\nAndrea Jegher\nFederico Modica\nErnest Nemirovskiy\nAntonio Notarangelo\nCecilia
+    Nu\xF1ez\nTeodora Tasic"
 --- !u!222 &826670930
 CanvasRenderer:
   m_ObjectHideFlags: 0
