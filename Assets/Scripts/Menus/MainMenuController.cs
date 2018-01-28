@@ -19,8 +19,8 @@ public class MainMenuController : MonoBehaviour
         "Traits inherited"
     };
 
-	public Button sound;
-	public Button music;
+	public Image sound;
+	public Image music;
 	public Sprite soundButtonSpriteActive;
 	public Sprite soundButtonSpriteInactive;
 	public Sprite musicButtonSpriteActive;
@@ -32,13 +32,13 @@ public class MainMenuController : MonoBehaviour
         highscoreTitle.text = CustomRandom.From(highscoreTitles);
         highscore.text = PlayerPrefs.GetInt("Highscore").ToString();
 		if (VolumeHandler.Music)
-			music.GetComponent<Image> ().sprite = musicButtonSpriteActive;
+			music.sprite = musicButtonSpriteActive;
 		else
-			music.GetComponent<Image> ().sprite = musicButtonSpriteInactive;
+			music.sprite = musicButtonSpriteInactive;
 		if (VolumeHandler.Sfx)
-			sound.GetComponent<Image> ().sprite = soundButtonSpriteActive;
+			sound.sprite = soundButtonSpriteActive;
 		else
-			sound.GetComponent<Image> ().sprite = soundButtonSpriteInactive;
+			sound.sprite = soundButtonSpriteInactive;
     }
     
     public void Play()
@@ -55,17 +55,17 @@ public class MainMenuController : MonoBehaviour
     {
 		VolumeHandler.Music = !VolumeHandler.Music;
 		if (VolumeHandler.Music)
-			music.GetComponent<Image> ().sprite = musicButtonSpriteActive;
+			music.sprite = musicButtonSpriteActive;
 		else
-			music.GetComponent<Image> ().sprite = musicButtonSpriteInactive;
+			music.sprite = musicButtonSpriteInactive;
     }
 
     public void Sound()
     {
 		VolumeHandler.Sfx = !VolumeHandler.Sfx;
 		if (VolumeHandler.Sfx)
-			sound.GetComponent<Image> ().sprite = soundButtonSpriteActive;
+			sound.sprite = soundButtonSpriteActive;
 		else
-			sound.GetComponent<Image> ().sprite = soundButtonSpriteInactive;
+			sound.sprite = soundButtonSpriteInactive;
     }    
 }

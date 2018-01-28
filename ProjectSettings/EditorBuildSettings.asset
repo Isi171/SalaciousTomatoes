@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final/Menu.unity
     guid: e976bf703dea6da4cad50516b248247a
+<<<<<<< HEAD
+=======
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+>>>>>>> 017c3da479ca4f4e9b17908abf1e0c60d39a919a
   - enabled: 1
     path: Assets/Scenes/Final/Score.unity
     guid: 94a863b390757fd4a9357dcb42b71d9b
