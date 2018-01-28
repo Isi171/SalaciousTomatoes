@@ -179,11 +179,11 @@ public class ObjectiveManager : MonoBehaviour {
         if (head == null)
             return false;
 
-        if (o.slot.Equals(Objective.Slot.Head) && o.gene.Equals(head))
+        if (o.slot == Objective.Slot.Head && o.gene == head.RpsValue)
             return true;
-        else if (o.slot.Equals(Objective.Slot.Body) && o.gene.Equals(body))
+        else if (o.slot == Objective.Slot.Body && o.gene == body.RpsValue)
             return true;
-        else if (o.slot.Equals(Objective.Slot.Limbs) && o.gene.Equals(limbs))
+        else if (o.slot == Objective.Slot.Limbs && o.gene == limbs.RpsValue)
             return true;
         else
             return false;            
