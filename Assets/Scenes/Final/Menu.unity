@@ -217,6 +217,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1804382655404416dbdc65b2f4e06f16, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &76162643 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114568298892865200, guid: 1804382655404416dbdc65b2f4e06f16,
+    type: 2}
+  m_PrefabInternal: {fileID: 76162642}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &309217570
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +529,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highscoreTitle: {fileID: 612874034}
   highscore: {fileID: 309217572}
+  sound: {fileID: 76162643}
+  music: {fileID: 734067520}
+  soundButtonSpriteActive: {fileID: 10905, guid: 0000000000000000f000000000000000,
+    type: 0}
+  soundButtonSpriteInactive: {fileID: 10907, guid: 0000000000000000f000000000000000,
+    type: 0}
+  musicButtonSpriteActive: {fileID: 10905, guid: 0000000000000000f000000000000000,
+    type: 0}
+  musicButtonSpriteInactive: {fileID: 10907, guid: 0000000000000000f000000000000000,
+    type: 0}
 --- !u!1 &573045813
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,6 +868,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0104ee8d7cba941e0bf7cabdb6552b01, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &734067520 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114113740974503926, guid: 0104ee8d7cba941e0bf7cabdb6552b01,
+    type: 2}
+  m_PrefabInternal: {fileID: 734067519}
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &826670927
 GameObject:
   m_ObjectHideFlags: 0
