@@ -29,6 +29,8 @@ public class ObjectiveManager : MonoBehaviour {
     private int score = 0;
     private int generation = 0;
     private float initialTime;
+    public AudioClip successClip;
+    public AudioClip failureClip;
 
     System.Random random = new System.Random();
 
@@ -110,6 +112,7 @@ public class ObjectiveManager : MonoBehaviour {
 
     private void CompleteBonus(BonusObjective o)
     {
+        VolumeHandler.SfxSource.PlayOneShot(successClip, 1);
         completedBonus.Add(o);
         UpdateScore(o.bonus);
         TriggerScorePopup(o);
@@ -117,6 +120,7 @@ public class ObjectiveManager : MonoBehaviour {
     }
 
     private void CompleteMalus(MalusObjective o, bool success) {
+        VolumeHandler.SfxSource.PlayOneShot(success ? successClip : failureClip, 1);
         completedMalus.Add(o);
         UpdateScore(success ? o.bonus : o.malus);
         TriggerScorePopup(o, !success);

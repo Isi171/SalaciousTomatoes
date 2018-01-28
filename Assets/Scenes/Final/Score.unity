@@ -156,6 +156,7 @@ MonoBehaviour:
   congratulationsHighscore: {fileID: 1650435895}
   score: {fileID: 935784515}
   thankYou: {fileID: 1621926764}
+  tap: {fileID: 8300000, guid: 019a7e230e5316342a57b0fc0c684acb, type: 3}
 --- !u!1 &316150349
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,6 +244,7 @@ GameObject:
   - component: {fileID: 406897380}
   - component: {fileID: 406897385}
   - component: {fileID: 406897384}
+  - component: {fileID: 406897386}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -364,6 +366,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 406897379}
+--- !u!95 &406897386
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406897379}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb0367b2e9fae4f7ca87b455daf4f7ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &458420633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1297,7 +1316,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1e7c4bcf46570b145aceec2b4a79b5ac, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 186ffa07c22204459b80b6f5d185a38c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

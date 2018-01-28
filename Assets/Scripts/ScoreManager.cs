@@ -11,6 +11,8 @@ public class ScoreManager : MonoBehaviour {
     [SerializeField] private Text score;
     [SerializeField] private Text thankYou;
 
+    public AudioClip tap;
+
     private string[] thankYous =
     {
         "Thank you for playing",
@@ -46,10 +48,12 @@ public class ScoreManager : MonoBehaviour {
     }
 
     public void Retry() {
+        VolumeHandler.SfxSource.PlayOneShot(tap, 1);
         SceneManager.LoadScene("Game");
     }
 
     public void Menu() {
+        VolumeHandler.SfxSource.PlayOneShot(tap, 1);
         SceneManager.LoadScene("Menu");
     }
 

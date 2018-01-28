@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class CreditsController : MonoBehaviour
 {
     [SerializeField] private Text creditsTitle;
+    public AudioClip tap;
+    
     
     private static readonly string[] creditsTitles =
     {
@@ -33,6 +35,7 @@ public class CreditsController : MonoBehaviour
     
     public void MainMenu()
     {
+        VolumeHandler.SfxSource.PlayOneShot(tap, 1);
         SceneManager.LoadScene("Menu");
     }
 }

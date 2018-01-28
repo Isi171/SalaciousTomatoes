@@ -11,8 +11,10 @@ public class MaterialSwapper : MonoBehaviour {
 	Gene currentGene;
 	MaterialAnimator ma;
 	
-	// Use this for initialization
-	void Start ()
+	// RACE CONDITION WITH RandomizeMeAtStart.cs, used on NewMonster
+	//to have it start randomized
+	//Do not change from Awake to Start
+	void Awake ()
 	{
 		//smr = GetComponent<SkinnedMeshRenderer> ();
 		ma = GetComponent<MaterialAnimator> ();
