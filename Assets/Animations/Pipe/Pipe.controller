@@ -5,7 +5,7 @@ AnimatorController:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: tubo-Tubo_00001
+  m_Name: Pipe
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers: []
